@@ -94,7 +94,7 @@ module LocusFocus
           if !acts_as_polymorphic_paperclip_options[:styles].nil?
             normalised_styles = {}
             acts_as_polymorphic_paperclip_options[:styles].each do |name, args|
-              if args[:processors].blank? && args.size == 2
+              if args[:processors].blank?
                 dimensions, format = [args, nil].flatten[0..1]
                 format = nil if format.blank?
                 if filename.match(/\.pdf$/) # remove crop commands if file is a PDF (this fails with Imagemagick)
