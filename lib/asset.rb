@@ -4,7 +4,11 @@ class Asset < ActiveRecord::Base
                     :styles => { :tiny => "64x64#",
                                  :small => "176x112#",
                                  :medium => "630x630>",
-                                 :large => "1024x1024>" }
+                                 :large => "1024x1024>",
+                                 :big_size => "250x250#",
+                                  :medium_size => "210x210>",
+                                  :small_size => "80x80#"
+                                  }
   def url(*args)
     data.url(*args)
   end
